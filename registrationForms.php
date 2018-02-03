@@ -1,77 +1,9 @@
-<! doctype html>
-<html lang = "en">
-  <head>
-    <title>forms.html</title>
-    <meta charset = "UTF-8" />
-    <style type = "text/css">
-    table, td, th {
-      border: 1px solid black;
-    } 
-</style>
-</head>
-<body>
-	<form action=www.aol.com method="POST">
-	<h1>Register</h1>
-	<label>First Name</label>
-		<input type="text" name="username" Placeholder="username">
-
-	<label>Last Name</label>
-		<input type="text" name="username" Placeholder="username">	
-	
-	<label>Email</label>
-	<input type="text" name="password" placeholder="password">
-	<input type="submit" >
-	<input pattern="5,10" required title="5 to 10 characters">
-</form>
-
-<p></p>
-	<form>
-		<label for="Male">Male:</label>
-		<input name="theChoice" id="male" type="radio">
-		<value="MALE">
-
-		<label for="Female"> Female:</label>
-		<input name="theChoice" id="female" type="radio">
-		<value="FEMALE">
-
-		<label for="Other"> Other:</label>
-		<input name="theChoice" id="other" type="radio">
-		<value="OTHER">
-	</form>
-	
-	<form action="gilbertking91@gmail.com">
-		<label for="Email"> Email:</label>
-		<input type="text" name="email" placeholder="email" method="post"
-	>
-	<input type="submit">
-	</form>
-	<form>
-		<label>Birthday</label>
-		<select name="Birthday">
-		<option>Month</option>
-		<option>May</option>
-		<option>June</option>
-		<option>July</option>
-			
-		</select>
-
-		<label>Day</label>
-		<select name="Day">
-		<option>0</option>
-		<option>1</option>
-		<option>2</option>
-	</select>
-	<label>Year</label>
-		<select name="Year">
-		<option>1991</option>
-		<option>1991</option>
-		<option>June</option>
-		<option>July</option>
-
-</select>	
-</form>
-<input type="checkbox"><br> I agree to the terms and conditions</br>
-
-
-<button>Submit</button>
-</body>
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `active` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`)
+)
